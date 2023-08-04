@@ -16,11 +16,11 @@
 <body>
   <header>
     <nav>
-      <div class="flex-center">
+      <div class="flex-center logo">
         <img src="./images/logo.svg" alt="logo">
       </div>
       <div>
-        <ul>
+        <ul class="nav-list">
           <li><a href="#">Features</a></li>
           <li><a href="#">Team</a></li>
           <li><a href="#">Sign In</a></li>
@@ -31,19 +31,30 @@
 
   <main>
     <section class="intro">
-      <div class="flex-center">
+      <div class="flex-center intro-illustration">
         <img src="./images/illustration-intro.png" alt="illustration">
       </div>
-      <h1>
-        All your files in one secure location, accessible anywhere.
-      </h1>
-      <p>
-        Fylo stores all your most important files in one secure location. Access them wherever
-        you need, share and collaborate with friends family, and co-workers.
-      </p>
-      <a href="#">
-        Get Started
-      </a>
+      <div class="intro-text">
+        <div class="background">
+          <div class="flex-center">
+            <picture>
+              <source media="(min-width:465px)" srcset="./images/bg-curvy-desktop.svg">
+              <img src="./images/bg-curvy-mobile.svg" alt="pattern">
+            </picture>
+          </div>
+        </div>
+        <h1>
+          All your files in one secure location, accessible anywhere.
+        </h1>
+        <p>
+          Fylo stores all your most important files in one secure location. Access them wherever
+          you need, share and collaborate with friends family, and co-workers.
+        </p>
+        <a href="#">
+          Get Started
+        </a>
+      </div>
+
     </section>
     <section class="features">
       <div class="feature-group">
@@ -118,7 +129,7 @@
 
     <section class="testimonials">
       <div class="testimonial">
-        <div class="flex-center">
+        <div class="flex-center icon">
           <img src="./images/bg-quotes.png" alt="quotes image">
         </div>
         <p>

@@ -22,10 +22,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: var(--White);
+  font-family: var(--font-body);
 }
 
 img {
   width: 100%;
+  height: 100%;
 }
 
 ul {
@@ -37,6 +40,18 @@ a {
   color: unset;
 }
 
+p {
+  opacity: .8;
+}
+
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: var(--font-heading);
+}
+
 /* utility classes start */
 
 .flex-center {
@@ -46,6 +61,130 @@ a {
 }
 
 /* utility classes end */
+
+header {
+  background-color: var(--BlueIntroEmail);
+  padding: 30px 7%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 27%;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 15px;
+}
+
+.nav-list a {
+  opacity: .8;
+}
+
+main {
+  background-color: var(--BlueMain);
+}
+
+.intro {
+  text-align: center;
+  background-color: var(--BlueIntroEmail);
+  position: relative;
+}
+
+.intro-illustration {
+  padding: 20px 10% 0 10%;
+}
+
+.intro-text {
+  padding: 80px 10% 0 10%;
+  position: relative;
+  z-index: 3;
+  background-color: var(--BlueMain);
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--BlueIntroEmail);
+}
+
+.background img {
+  transform: translateY(5px);
+}
+
+h1 {
+  line-height: 35px;
+  margin-bottom: 25px;
+}
+
+.intro-text p {
+  margin-bottom: 40px;
+}
+
+.intro-text a {
+  background-color: var(--BlueCta);
+  font-weight: 700;
+  padding: 15px 60px;
+  border-radius: 100px;
+}
+
+.features {
+  padding: 150px 10%;
+}
+
+.feature-group {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-bottom: 80px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+
+.stay-productive {
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.stay-productive h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.button {
+  /* border: 1px solid red; */
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  color: var(--CyanCta);
+  border-bottom: 2px solid var(--CyanCta);
+  width: fit-content;
+  padding-bottom: 3px;
+}
+
+.testimonials {
+  padding: 150px 15%;
+}
+
 
 
 .attribution {
