@@ -121,7 +121,25 @@
         <div class="button">
           <a href="#">See how Fylo works</a>
           <div class="flex-center">
-            <img src="./images/icon-arrow.svg" alt="arrow">
+            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <circle id="b" cx="6" cy="6" r="6" />
+                <filter x="-25%" y="-25%" width="150%" height="150%" filterUnits="objectBoundingBox" id="a">
+                  <feOffset in="SourceAlpha" result="shadowOffsetOuter1" />
+                  <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1" />
+                  <feColorMatrix
+                    values="0 0 0 0 0.384313725 0 0 0 0 0.878431373 0 0 0 0 0.850980392 0 0 0 0.811141304 0"
+                    in="shadowBlurOuter1" />
+                </filter>
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <g transform="translate(2 2)">
+                  <use fill="#000" filter="url(#a)" xlink:href="#b" />
+                  <use fill="#62E0D9" xlink:href="#b" />
+                </g>
+                <path d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z" fill="#1B2330" />
+              </g>
+            </svg>
           </div>
         </div>
       </div>
@@ -129,7 +147,7 @@
 
     <section class="testimonials">
       <div class="testimonial">
-        <div class="flex-center icon">
+        <div class="flex-center quote-icon">
           <img src="./images/bg-quotes.png" alt="quotes image">
         </div>
         <p>
@@ -140,7 +158,7 @@
           <div class="flex-center">
             <img src="./images/profile-1.jpg" alt="profile image">
           </div>
-          <div class="author">
+          <div class="author-info">
             <b>Satish Patel</b>
             <span>Founder & CEO, Huddle</span>
           </div>
@@ -155,7 +173,7 @@
           <div class="flex-center">
             <img src="./images/profile-2.jpg" alt="profile image">
           </div>
-          <div class="author">
+          <div class="author-info">
             <b>Bruce McKenzie</b>
             <span>Founder & CEO, Huddle</span>
           </div>
@@ -168,9 +186,9 @@
         </p>
         <div class="author">
           <div class="flex-center">
-            <img src="./images/profile-1.jpg" alt="profile image">
+            <img src="./images/profile-3.jpg" alt="profile image">
           </div>
-          <div class="author">
+          <div class="author-info">
             <b>Iva Boyd</b>
             <span>Founder & CEO, Huddle</span>
           </div>
@@ -186,14 +204,14 @@
         It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
         questions, our support team would be happy to help you.
       </p>
-      <form>
-        <input type="email" required>
+      <form class="email-form">
+        <input type="email" placeholder="email@example.com" required>
         <button type="submit">Get Started For Free</button>
       </form>
     </div>
   </main>
   <footer>
-    <div class="flex-center">
+    <div class="flex-center footer-logo">
       <img src="./images/logo.svg" alt="logo">
     </div>
     <div class="footer-flex">
@@ -274,6 +292,7 @@
       Coded by <a href="https://github.com/younessoub">Youness Oubelkacem</a>.
     </p>
   </footer>
+
 </body>
 
 </html>

@@ -60,7 +60,16 @@ a {
   align-items: center;
 }
 
+.border {
+  border: 1px solid red;
+}
+
 /* utility classes end */
+
+body {
+  background-color: var(--BlueMain);
+
+}
 
 header {
   background-color: var(--BlueIntroEmail);
@@ -88,8 +97,9 @@ nav {
   opacity: .8;
 }
 
-main {
-  background-color: var(--BlueMain);
+.nav-list a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 .intro {
@@ -132,10 +142,15 @@ h1 {
 }
 
 .intro-text a {
-  background-color: var(--BlueCta);
+  background-image: linear-gradient(to right, var(--CyanCta), var(--BlueCta) 40%);
   font-weight: 700;
   padding: 15px 60px;
   border-radius: 100px;
+}
+
+.intro-text a:hover {
+  background-image: none;
+  background-color: var(--CyanCta);
 }
 
 .features {
@@ -181,17 +196,285 @@ h1 {
   padding-bottom: 3px;
 }
 
-.testimonials {
-  padding: 150px 15%;
+.button:hover {
+  color: var(--White);
+  border-color: var(--White)
+}
+
+.button:hover use {
+  fill: var(--White);
 }
 
 
+.testimonials {
+  padding: 150px 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.testimonial {
+  position: relative;
+  /* border: 1px solid red; */
+  background-color: var(--BlueTestimonial);
+  padding: 30px 20px;
+  font-size: 12px;
+
+}
+
+.quote-icon {
+  position: absolute;
+  height: 20px;
+  width: 25px;
+  top: -20px;
+  left: 5px;
+}
+
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.author img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-info span {
+  opacity: .8;
+  font-size: 10px;
+}
+
+.cta {
+  margin: 0 10%;
+  text-align: center;
+  background-color: var(--BlueTestimonial);
+  padding: 30px;
+  border-radius: 10px;
+  transform: translateY(50%);
+}
+
+.cta p {
+  margin: 20px 0;
+}
+
+.email-form input,
+.email-form button {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 100px;
+}
+
+.email-form input {
+  color: var(--BlueFooter);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.email-form button {
+  background-image: linear-gradient(to right, var(--CyanCta), var(--BlueCta) 40%);
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.email-form button:hover {
+  background-image: none;
+  background-color: var(--CyanCta);
+}
+
+footer {
+  background-color: var(--BlueFooter);
+  padding: 250px 10% 50px 10%;
+}
+
+.footer-logo {
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.footer-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+/* .infos {
+  display: flex;
+  flex-direction: column;
+  gap: ;
+} */
+
+.info {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.info img {
+  width: 20px;
+  margin-top: 5px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-nav li {
+  margin-bottom: 10px;
+  opacity: .8;
+}
+
+.footer-nav li:hover {
+  opacity: 1;
+  font-weight: 700;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+.icon {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon:hover {
+  border-color: var(--CyanCta);
+}
+
+.icon:hover path {
+  fill: var(--CyanCta);
+}
+
+.icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+.icon path {
+  fill: white;
+}
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 30px;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width:900px) {
+  .logo {
+    width: 15%;
+  }
+
+  .nav-list {
+    gap: 60px;
+  }
+
+  .intro-illustration,
+  .intro-text {
+    padding-inline: 30%;
+  }
+
+  .features {
+    padding: 300px 20% 100px 20%;
+  }
+
+  .feature-group {
+    flex-direction: row;
+  }
+
+  .stay-productive {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .stay-productive>div {
+    width: 50%;
+  }
+
+  .stay-productive h2 {
+    font-size: 28px;
+  }
+
+  .testimonials {
+    flex-direction: row;
+  }
+
+  .quote-icon {
+    width: 40px;
+    height: 40px;
+    z-index: -1;
+    top: -30px;
+    left: -8px;
+  }
+
+  .cta {
+    margin-inline: 23%;
+  }
+
+  .email-form {
+    display: flex;
+    gap: 20px;
+  }
+
+  .email-form input {
+    margin: 0;
+    width: 60%;
+  }
+
+  .email-form button {
+    width: 40%;
+  }
+
+  .footer-logo {
+    width: 10%;
+  }
+
+  .footer-flex {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .infos {
+    display: flex;
+    gap: 40px;
+    width: 60%;
+  }
+
+  .info {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .footer-nav {
+    flex-direction: row;
+    gap: 30px;
+  }
 }
